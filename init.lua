@@ -204,11 +204,16 @@ require('lazy').setup({
     -- See `:help lualine.txt`
     opts = {
       options = {
-        icons_enabled = false,
+        icons_enabled = true,
         theme = 'catppuccin',
         component_separators = '|',
         section_separators = '',
       },
+      sections = {
+        lualine_a = {
+          'buffers'
+        }
+      }
     },
   },
 
@@ -272,6 +277,8 @@ require('lazy').setup({
 -- [[ Setting options ]]
 -- See `:help vim.o`
 -- NOTE: You can change these options as you wish!
+
+vim.o.relativenumber = true
 
 -- Set highlight on search
 vim.o.hlsearch = false
@@ -572,8 +579,8 @@ local servers = {
   -- gopls = {},
   -- pyright = {},
   -- rust_analyzer = {},
-  -- tsserver = {},
-  -- html = { filetypes = { 'html', 'twig', 'hbs'} },
+  tsserver = {},
+  html = { filetypes = { 'html', 'twig', 'hbs', 'css'} },
 
   lua_ls = {
     Lua = {
