@@ -577,10 +577,11 @@ require('mason-lspconfig').setup()
 local servers = {
   -- clangd = {},
   -- gopls = {},
+  bashls = { filetypes = { 'bash', 'sh', 'zsh' } },
   pyright = {},
   rust_analyzer = {},
   tsserver = {},
-  html = { filetypes = { 'html', 'twig', 'hbs', 'css'} },
+  html = { filetypes = { 'html', 'twig', 'hbs', 'css' } },
 
   lua_ls = {
     Lua = {
