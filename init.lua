@@ -333,8 +333,8 @@ vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnos
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
 
--- setting keybinding for fugitive
-vim.api.nvim_set_keymap('n', '<Leader>gs', ':G<CR>', { desc = '[S]tatus with vim fugitive', noremap = true, silent = true })
+-- setting keybinding for fugitive git status
+vim.api.nvim_set_keymap('n', '<Leader>gs', ':Git<CR>', { desc = '[S]tatus with vim fugitive', noremap = true, silent = true })
 
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
