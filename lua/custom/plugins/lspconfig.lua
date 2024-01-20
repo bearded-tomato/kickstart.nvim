@@ -9,11 +9,11 @@ return {
     'williamboman/mason-lspconfig.nvim',
     -- Useful status updates for LSP
     -- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
-    { 'j-hui/fidget.nvim', opts = {} },
+    { 'j-hui/fidget.nvim',       opts = {} },
     -- Additional lua configuration, makes nvim stuff amazing!
     'folke/neodev.nvim',
   },
-  config = function ()
+  config = function()
     -- [[ Configure LSP ]]
     --  This function gets run when an LSP connects to a particular buffer.
     local on_attach = function(_, bufnr)
@@ -43,7 +43,7 @@ return {
 
       -- See `:help K` for why this keymap
       nmap('K', vim.lsp.buf.hover, 'Hover Documentation')
-      nmap('<C-k>', vim.lsp.buf.signature_help , 'Signature Documentation')
+      nmap('<C-k>', vim.lsp.buf.signature_help, 'Signature Documentation')
 
       -- Lesser used LSP functionality
       nmap('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
@@ -73,12 +73,12 @@ return {
     local servers = {
       -- clangd = {},
       -- gopls = {},
+      luaformatter = { filetypes = { 'lua' } },
       bashls = { filetypes = { 'bash', 'sh', 'zsh' } },
       pyright = {},
       rust_analyzer = {},
       tsserver = {},
       html = { filetypes = { 'html', 'twig', 'hbs', 'css' } },
-
       lua_ls = {
         Lua = {
           workspace = { checkThirdParty = false },

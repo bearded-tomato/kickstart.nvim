@@ -76,7 +76,7 @@ require('lazy').setup({
   'tpope/vim-sleuth',
 
   -- Useful plugin to show you pending keybinds.
-  { 'folke/which-key.nvim', opts = {} },
+  { 'folke/which-key.nvim',  opts = {} },
   {
     -- Adds git related signs to the gutter, as well as utilities for managing changes
     'lewis6991/gitsigns.nvim',
@@ -297,7 +297,8 @@ vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open float
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
 
 -- setting keybinding for fugitive git status, allows for better git workflow
-vim.api.nvim_set_keymap('n', '<Leader>gs', ':Git<CR>', { desc = '[S]tatus with vim fugitive', noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Leader>gs', ':Git<CR>',
+  { desc = '[S]tatus with vim fugitive', noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<Leader>gp', ':Git push<CR>', { desc = '[P]ush changes', noremap = true, silent = true })
 
 -- [[ Highlight on yank ]]
