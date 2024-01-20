@@ -298,7 +298,7 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagn
 
 -- setting keybinding for fugitive git status, allows for better git workflow
 vim.api.nvim_set_keymap('n', '<Leader>gs', ':Git<CR>', { desc = '[S]tatus with vim fugitive', noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<Leader>gp', ':Git push<CR>', { desc = '[P]ush changes', noremap = true, silent = false })
+vim.api.nvim_set_keymap('n', '<Leader>gp', ':Git push<CR>', { desc = '[P]ush changes', noremap = true, silent = true })
 
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
