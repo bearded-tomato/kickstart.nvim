@@ -1,7 +1,7 @@
 return {
   "ThePrimeagen/harpoon",
   branch = "harpoon2",
-  config = function ()
+  config = function()
     local harpoon = require("harpoon")
     harpoon:setup({})
     vim.keymap.set("n", "<C-a>", function() harpoon:list():append() end)
