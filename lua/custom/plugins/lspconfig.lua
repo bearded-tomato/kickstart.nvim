@@ -73,7 +73,6 @@ return {
     local servers = {
       -- clangd = {},
       -- gopls = {},
-      luaformatter = { filetypes = { 'lua' } },
       bashls = { filetypes = { 'bash', 'sh', 'zsh' } },
       pyright = {},
       rust_analyzer = {},
